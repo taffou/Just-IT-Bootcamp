@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+
+    }
+}
+
+@keyframes profile-pic {
+    0% {
+        border-color: purple;
+    }
+    25% {
+        border-color: blue;
+    }
+    75% {
+        border-color: green;
+    }
+    100% {
+        border-color: blue;
+    }
+}
+
+:root {
+    --background-color: #353535;
+    --header-color: #3c6e71;
+}
+
+* , ::before, ::after{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: var(--background-color);
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 4px;
+}
+
+
+header {
+    max-width: 1200px;
+    height: 150px;
+    background: repeating-linear-gradient(rgb(113, 113, 139) 60%, var(--header-color));
+    align-items: center;
+    margin: 0px auto;
+    position: sticky;
+    top: 0;
+}
+
+header h1{
+    grid-column: span 6;
+    animation: fade-down 1.5s;
+    text-align: center;
+}
+
+header nav {
+    grid-column: 7 / span 6;
+    justify-self: right;
+    animation: fade-down 1.5s;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #181212;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+header nav a:hover {
+    color: #0844f8;
+    font-size: x-large;
+}
+
+main {
+    margin: 60px auto;
+    max-width: 1200px;
+    animation: fade-up 1.5s;
+    background: #4f464622;
+}
+
+main img {
+    grid-column: span 6;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ng-img {
+    border: 10px solid wheat;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 200px;
+    max-height: 200px;
+    animation: profile-pic 5s infinite;
+    margin-top: 200px;
+}
+
+main .welcome {
+    grid-column: 8 / span 5;
+    text-align: center;
+    color: rgb(13, 164, 13);
+    font-size: large;
+    margin-top: 200px;
+}
+
+main h2 {
+    color: rgb(119, 147, 84);
+    font-size: 3rem;
+}
+
+main h4 {
+    font-size: 1rem;
+}
+
+.tools {
+    grid-column: span 12;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 60vh;
+    margin-top: 300px;
+}
+
+.segment p {
+    margin-top: 0px;
+}
+
+.roll-container {
+    display: flex;
+}
+
+.roll {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    background-color: rgb(91, 124, 114);
+    overflow-x: scroll;
+}
+
+.roll::-webkit-scrollbar {
+    display: none;
+}
+
+.roll .segment {
+    width: 100%;
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.roll .segment {
+    text-align: center;
+    padding-top: 100px;
+    filter: blur(100%);
+    transition: transform 0.5s;
+}
+
+#prev, #next {
+    background-color: rgb(91, 106, 101);
+    width: 80px;
+    height: 20px;
+    position: relative;
+    top: 80px;
+    margin: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.roll .segment div:hover {
+    filter: blur(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+main .card {
+    text-align: center; 
+    height: 95vh;
+    grid-column: span 4;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    /* height: 500px; */
+    border: none;
+    overflow: hidden;
+}
+
+.quiz {
+    background: rgb(142, 108, 108);
+}
+
+.contact {
+    grid-column: span 12;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 60vh;
+}
+
+footer a {
+    color: linen;
+    font-size: 30px;
+}
+
+footer a:hover {
+    color: blue;
+}
+
+.author-name {
+    font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.author-name a:hover {
+    background-color: #306203;
+}
+
+.publish-date {
+    color: yellow
+} 
+
+
+@media screen and (max-width: 1000px) {
+    main img {
+        grid-column: 2 / span 10;
+    }
+
+    main .welcome {
+        grid-column: 2 / span 10;
+        text-align: center;
+    }
+
+    main .card {
+        grid-column: 2 / span 10;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        padding: 20ps 0px;
+    }
+
+    header h1 {
+        grid-column: span 12;
+        text-align: center;
+        margin: 0;
+    }
+
+    header nav {
+        grid-column: span 12;
+        justify-self: center;
+    }
+
+    main img {
+        grid-column: span 12;
+    }
+
+    main .welcome {
+        grid-column: span 12;
+    }
+
+    main .card {
+        grid-column: span 12;
+    }
+}
