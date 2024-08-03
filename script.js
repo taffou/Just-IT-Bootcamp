@@ -1,6 +1,4 @@
 let scrollContainer = document.querySelector(".roll");
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
 
 scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
