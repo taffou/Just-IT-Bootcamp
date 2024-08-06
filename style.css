@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.9);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-
-    }
-}
-
 @keyframes fade-down {
     0% {
         opacity: 0;
@@ -28,27 +15,37 @@
 
 @keyframes profile-pic {
     0% {
-        border-color: purple;
+        border-color: #810357;
     }
     25% {
-        border-color: blue;
+        border-color: #0000ff;
     }
     75% {
-        border-color: green;
+        border-color: #068781;
     }
     100% {
-        border-color: blue;
+        border-color: #2e2e97;
     }
 }
-
+/* ------------------------------------------------- Basic CSS ----------------------------------------------------- */
 :root {
-    --background-color: #353535;
-    --header-color: #3c6e71;
+    --background-color: #575977;
+    --header-color1: #595a6d;
+    --header-color2: #2e368e8f;
+    --select-color1: #d1cbcb85;
+    --select-color2: transparent;
+    --select-color3: #d1cbcb60;
+    --select-color4: #2b2b99c0;
+    --select-color5: #9b9898c7;
+    --select-color6: #0000ff46;
+    --select-color7: #faf0e6;
+    --select-color8: #322c32dd;
 }
 
 * , ::before, ::after{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -58,8 +55,7 @@ html {
 body {
     font-family: "Raleway", sans-serif;
     background: var(--background-color);
-    color: #fff;
-    background-attachment: fixed;
+    color: var(--select-color7)
 }
 
 .grid {
@@ -70,23 +66,33 @@ body {
 
 
 header {
-    max-width: 1200px;
-    height: 150px;
-    background: repeating-linear-gradient(rgb(113, 113, 139) 60%, var(--header-color));
+    max-width: 80vw;
+    height: 160px;
+    background: linear-gradient(var(--header-color1) 55%, var(--header-color2));
     align-items: center;
     margin: 0px auto;
     position: sticky;
     top: 0;
 }
 
-header h1{
-    grid-column: span 6;
+header .nt-logo{
+    grid-column: 2;
     animation: fade-down 1.5s;
-    text-align: center;
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+header h1 {
+    grid-column: 3 / span 2;
+    animation: fade-down 1.5s;
+    position: relative;
+    top: 20px;
+    color: #090969;
 }
 
 header nav {
-    grid-column: 7 / span 6;
+    grid-column: 6 / span 6;
     justify-self: right;
     animation: fade-down 1.5s;
 }
@@ -105,53 +111,105 @@ header nav a:hover {
 }
 
 main {
-    margin: 60px auto;
-    max-width: 1200px;
-    animation: fade-up 1.5s;
-    background: #4f464622;
+    margin: 0 auto;
+    max-width: 80vw;
+    background: transparent;
 }
 
 main img {
-    grid-column: span 6;
-    width: 100%;
-    object-fit: cover;
-}
-
-.ng-img {
-    border: 10px solid wheat;
+    grid-column: 3 / span 2;
+    border: 10px solid #f5deb3;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
     object-fit: cover;
-    max-width: 200px;
-    max-height: 200px;
     animation: profile-pic 5s infinite;
-    margin-top: 200px;
+    
 }
 
 main .welcome {
-    grid-column: 8 / span 5;
+    grid-column: 6 / span 5;
     text-align: center;
-    color: rgb(13, 164, 13);
-    font-size: large;
-    margin-top: 200px;
+    color: rgb(29, 27, 27);
+    font-size: 15px;
 }
 
+
 main h2 {
-    color: rgb(119, 147, 84);
+    color: rgba(16, 17, 16, 0.856);
     font-size: 3rem;
 }
 
-main h4 {
-    font-size: 1rem;
+main .greeting {
+    font-size: 50px;
+    color: #0011ff;
 }
 
-.tools {
-    grid-column: span 12;
+main .hello {
+    font-size: 30px;
+    color: #ff0000;
+}
+
+main .name {
+    font-size: 20px;
+    color: #19b3d6;
+}
+
+main .role {
+    font-size: 20px;
+}
+
+main .education {
+    font-size: 20px;
+    color: #b52828;
+}
+
+main .bootcamp {
+    font-size: 25px;
+    color: #0c1ddc;
+}
+
+main .style {
+    font-size: 20px;
+    color: #1e85a4;
+}
+
+main h4 {
+    font-size: 0.5rem;
+}
+
+#about-me {
+    grid-column: 12 span;
+    height: 75.5vh;
+    background-color: var(--select-color1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+#about-me a {
+    text-decoration: none;
+    color: #faf0e6;
+    font-size: 20px;
+}
+
+#about-me a:hover {
+    color: var(--select-color6);
+}
+section h3 {
+    font-size: 30px;
+}
+
+#skills {
+    grid-column: 1 / span 12;
     text-align: center;
-    font-size: 1.5rem;
-    height: 60vh;
-    margin-top: 300px;
+    height: 50vh;
+    background-color: var(--select-color1);
+    margin-bottom: 90px;
+    border-radius: 10px;
 }
 
 .segment p {
@@ -160,13 +218,15 @@ main h4 {
 
 .roll-container {
     display: flex;
+    background-color: transparent;
+    height: 380px;
+    padding: 90px 0 0;
 }
 
 .roll {
-    width: 1200px;
-    height: 300px;
+    width: 100%;
+    height: 60%;
     display: flex;
-    background-color: rgb(91, 124, 114);
     overflow-x: scroll;
 }
 
@@ -176,7 +236,9 @@ main h4 {
 
 .roll .segment {
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
+    
+    background-color: var(--select-color5);
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 20px;
@@ -191,23 +253,20 @@ main h4 {
     transition: transform 0.5s;
 }
 
-#prev, #next {
-    background-color: rgb(91, 106, 101);
-    width: 80px;
-    height: 20px;
-    position: relative;
-    top: 80px;
-    margin: 50px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
 .roll .segment div:hover {
     filter: blur(0);
+    color: var(--select-color4);
+    font-size: 50px;
+    background: linear-gradient(var(--select-color5) 60%, var(--header-color2));
+    border-radius: 10px;
     cursor: pointer;
     transform: scale(1.1);
 }
 
+article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
 main .card {
     text-align: center; 
@@ -215,38 +274,83 @@ main .card {
     grid-column: span 4;
     overflow: hidden;
     margin-top: 100px;
+    background: var(--select-color2);
+    border-radius: 10px;
 }
 
 iframe {
     width: 100%;
     height: 100%;
-    /* height: 500px; */
     border: none;
     overflow: hidden;
 }
 
 .quiz {
-    background: rgb(142, 108, 108);
+    background: #8e6c6c;
 }
 
-.contact {
+#contact {
     grid-column: span 12;
-    text-align: center;
     font-size: 1.5rem;
-    height: 60vh;
+    height: 20vh;
+    box-sizing: border-box;
+    background: var(--select-color2);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.inquiry {
+    width: 50px;
+    height: 50px;
+    background: var(--select-color2);
+    grid-column: 2 / span 4;
+}
+
+.send {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--select-color2);
+    grid-column: 11 / span 4;
+}
+
+.send:hover {
+    background-color: var(--select-color6);
+}
+
+footer {
+    margin: 0 auto;
+    grid-column-start: 2;
+    max-width: 80vw;
+    background-color: var(--select-color1);
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-content: center;
 }
 
 footer a {
-    color: linen;
-    font-size: 30px;
+    text-decoration: none;
+    color: var(--select-color7);
+    font-size: 20px;
+}
+
+footer span {
+    margin-right: 10px;
 }
 
 footer a:hover {
-    color: blue;
+    color: var(--select-color6);
+}
+
+.author {
+    grid-column: 3 / span 4;
+    font-size: 11px;
 }
 
 .author-name {
-    font-size: 2rem;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -255,13 +359,47 @@ footer a:hover {
 }
 
 .publish-date {
-    color: yellow
+    color: var(--select-color8);
 } 
+
+.vl {
+    grid-column-start: 7;
+    border-left: 6px solid var(--select-color3);
+    width: 10px;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.links {
+    grid-column: 10 / span 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1400px) {
+    header, main, footer {
+        max-width: 100vw;
+    }
+}
 
 
 @media screen and (max-width: 1000px) {
+    header, main, footer {
+        max-width: 100vw;
+    }
+
+    header .nt-logo {
+        height: 50px;
+    }
+
+    header h1 {
+        top: 0;
+    }
     main img {
-        grid-column: 2 / span 10;
+        grid-column: 4 / span 10;
+        margin-left: 25px;
+        width: 50vw;
+        height: 50vw;
     }
 
     main .welcome {
@@ -273,15 +411,24 @@ footer a:hover {
         grid-column: 2 / span 10;
         text-align: center;
     }
+
+    #contact {
+        margin-top: 0;
+    }
+
+    .send {
+        grid-column: 10 / span 4;
+    }
 }
 
 @media screen and (max-width: 550px) {
     header {
-        padding: 20ps 0px;
+        padding: 20px 0px;
     }
 
     header h1 {
-        grid-column: span 12;
+        top: 5px;
+        grid-column: 11;
         text-align: center;
         margin: 0;
     }
@@ -292,14 +439,35 @@ footer a:hover {
     }
 
     main img {
-        grid-column: span 12;
+        grid-column: 5 / span 3;
+        width: 30vw;
+        height: 30vw;
     }
 
     main .welcome {
         grid-column: span 12;
     }
 
+    #about-me .links {
+        flex-direction: row;
+    }
+
     main .card {
         grid-column: span 12;
+    }
+
+    #contact {
+        grid-column: span 12;
+        height: 80vh;
+        margin-top: 0;
+    }
+
+    .send {
+        grid-column: 10 / span 2;
+    }
+
+    .links {
+        flex-direction: column;
+        justify-content: space-around;
     }
 }

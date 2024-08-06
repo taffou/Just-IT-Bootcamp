@@ -10,87 +10,96 @@
     <link rel="stylesheet" href="./style.css">
 
     <title>Ngasseu Taffou Portfolio</title>
-    <link rel="icon" href="./Images/flavicon.ico" type="image/x-icon">
+    <link rel="icon" href="./Images/favicon.ico" sizes= "32x32" type="image/x-icon">
 </head>
 
 <body>
     <!-- Header Section -->
     <header class="grid">
-        <h1>NT</h1>
+            <img src="./Images/nt-logo.png" alt="NT Logo" loading="lazy" class="nt-logo">
+            <h1 class="my-name">Ngasseu Taffou</h1>
         <!-- Nav Section -->
         <nav>
-            <a href="#greeting">About</a>
+            <a href="#about-me">About</a>
             <a href="#skills">Skills</a>
             <a href="#project">Projects</a>
-            <a href="#">MyCV</a>
-            <a href="#reach">Contact</a>
+            <a href="./Ngasseu Taffou_CV.pdf">MyCV</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <!-- Main Section -->
     <main class="grid">
-        <img src="./Images/profile-pic.jpg" alt="NT Profile picture" loading="lazy" class="ng-img">
-        <!-- Welcome Section within Main -->
-        <article class="welcome" id="greeting">
-            <h2>Welcome</h2>
-            <p>
-                Hello! <span>Ngasseu Taffou</span>, <span>Junior Full-Stack Developer</span> based in South London. Dedicated on producing good looking websites.</p>
-            <p>
-                Software Engineer with a degree in <span>Computer Science with Artificial Intelligence</span>. Reading about ancients civilisations 
-                and enjoying board games are my hobbies that consolidate my innovative mindset.
-            </p>
-            <p>
-                My passion for tailored designed graphics led me to size an opportunity in software development. I recently completed a <span>3-month Software Development Bootcamp</span> to fit industry standards in Frontend Development.
-            </p>
-        </article>
-        
-        <section class="tools" id="skills">
+
+        <section id="about-me">
+            <img src="./Images/profile-pic.jpg" alt="NT Profile picture" loading="lazy">
+            <!-- Welcome Section within Main -->
+            <article class="welcome">
+                <h2><span class="greeting">W</span>elcome</h2>
+                <p>
+                    <span class="hello">H</span>ello! <span class="name">Ngasseu Taffou</span>, <span class="role">Junior Full-Stack Developer</span> based in South London. Dedicated on producing good looking websites.</p>
+                <p>
+                    Software Engineer with a degree in <span class="education">Computer Science with Artificial Intelligence</span>. Reading about ancients civilisations 
+                    and enjoying board games are my hobbies that consolidate my innovative mindset.
+                </p>
+                <p>
+                    My passion for <span class="style">tailored designed graphics</span> led me to size an opportunity in software development. I recently completed a <span class="bootcamp">3-month Software Development Bootcamp</span> to fit industry standards in Frontend Development.
+                </p>
+            </article>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/ngasseu-taffou-a141w5/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/taffou"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <section id="skills">
             <h3>Tools</h3>
             <div class="roll-container">
                     <div class="roll">
                         <div class="segment">
-                            <p>HTML 5</p>
-                            <P>CSS 3</P>
-                            <P>JavaScript</P>
+                            <div><p>HTML 5</p></div>
+                            <div><P>CSS 3</P></div>
+                            <div><P>JavaScript</P></div>
                         </div>
                         <div class="segment">
-                            <p>Python</p>
-                            <p>MySQL</p>
-                            <p>NoSQL</p>
+                            <div><p>Python</p></div>
+                            <div><p>MySQL</p></div>
+                            <div><p>NoSQL</p></div>
                         </div>
                     </div>
             </div>
         </section>
         
-        <article class="card" id="project">
-            <h4>Python App</h4>
+        <article class="card">
+            <h3>JavaScrip - App</h3>
             <iframe src="https://taffou.github.io/Basic-Quiz/" frameborder="0"></iframe>
         </article>
 
-        <article class="card">
-            <h4>JavaScrip App</h4>
+        <article class="card" id="project">
+            <h3>JavaScrip - App</h3>
             <iframe src="https://taffou.github.io/Basic-Weather-App/" frameborder="0"></iframe>
         </article>
         <article class="card">
-            <h4>JavaScrip App</h4>
+            <h3>Python - App</h3>
             <iframe src="https://replit.com/@ngasseutaffou/Weather-App-Demo?embed=true" ></iframe>
         </article>
 
-        <section class="contact" id="reach">
-            <h3>Contact Me</h3>
-            <p>Hello! Make an inquiry.</p>
+        <section id="contact">
+            <h3 class="inquiry">Inquire</h3>
+            <button class="send">send</button>
         </section>
 
     </main>
     <!-- Footer -->
     <footer class="grid">
-        <div>
-            <p class="author-name">By <a href="#" target="_blank" rel="noreferrer">Ngasseu Taffou</a></p>
+        <div class="author">
+            <p class="author-name">&copy Ngasseu Taffou</p>
             <p class="publish-date">July 29, 2024</p>
         </div>
-        <div>
+        <div class="vl"></div>
+        <div class="links">
             <a href="https://www.linkedin.com/in/ngasseu-taffou-a141w5/"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/taffou"><i class="fab fa-github"></i></a>
         </div>
+        
     </footer>
 </body>
 
