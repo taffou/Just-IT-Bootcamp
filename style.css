@@ -315,7 +315,7 @@ iframe {
     background: var(--select-color2);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 350px 0 80px;
+    margin: 300px 0 80px;
 }
 
 .inquiry {
@@ -476,7 +476,7 @@ footer a:hover {
     #contact {
         grid-column: span 12;
         height: 80vh;
-        margin-top: 0;
+        margin: 300px 0 0;
     }
 
     .send {
