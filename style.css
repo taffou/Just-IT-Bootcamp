@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Kelly+Slab&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Kelly+Slab&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Tilt+Warp&family=Timmana&display=swap');
 
 @keyframes fade-down {
     0% {
@@ -136,42 +142,54 @@ main .welcome {
 
 
 main h2 {
-    color: rgba(16, 17, 16, 0.856);
+    color: #101110da;
     font-size: 3rem;
 }
 
 main .greeting {
     font-size: 50px;
     color: #0011ff;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
 }
 
 main .hello {
     font-size: 30px;
     color: #ff0000;
+    font-family: "Merriweather", serif;
+    font-style: italic;
 }
 
 main .name {
     font-size: 20px;
-    color: #19b3d6;
+    color: #266c7c;
+    font-family: "Timmana", sans-serif;
 }
 
 main .role {
     font-size: 20px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 main .education {
     font-size: 20px;
     color: #b52828;
+    font-family: "Bellefair", serif;
+    font-weight: bolder;
 }
 
 main .bootcamp {
     font-size: 25px;
     color: #0c1ddc;
+    font-family: "Timmana", sans-serif;
 }
 
 main .style {
     font-size: 20px;
     color: #1e85a4;
+    font-family: "Kelly Slab", sans-serif;
 }
 
 main h4 {
