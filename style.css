@@ -124,7 +124,7 @@ main {
 
 main img {
     grid-column: 3 / span 2;
-    border: 10px solid #f5deb3;
+    border: 5px solid #f5deb3;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
